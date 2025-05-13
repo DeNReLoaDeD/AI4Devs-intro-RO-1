@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de Reverse String</title>
+    <script src="script.js" defer></script>
+    <style>
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input, textarea {
+            margin: 5px 0;
+            width: 200px;
+        }
+        textarea {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Reverse con botón</h2>
+<div class="section">
+    <p>Introduce un texto y pulsa el botón para invertirlo.</p>
+    <label for="input1">Texto:</label>
+    <input type="text" id="input1">
+    <button onclick="reverseWithButton()">Revertir</button>
+    <br>
+    <label for="output1">Resultado:</label>
+    <textarea id="output1" readonly></textarea>
+</div>
+
+<h2>Reverse con botón (min 3 chars)</h2>
+<div class="section">
+    <p>El botón aparece al escribir mínimo 3 caracteres. Al pulsarlo, invierte el texto.</p>
+    <label for="input2">Texto:</label>
+    <input type="text" id="input2" oninput="handleInput2()">
+    <button id="button2" onclick="reverseWithMinChars()" style="display:none;">Revertir</button>
+    <br>
+    <label for="output2">Resultado:</label>
+    <textarea id="output2" readonly></textarea>
+</div>
+
+<h2>Reverse automático</h2>
+<div class="section">
+    <p>El texto se invierte automáticamente mientras escribes.</p>
+    <label for="input3">Texto:</label>
+    <input type="text" id="input3" oninput="reverseLive()">
+    <br>
+    <label for="output3">Resultado:</label>
+    <textarea id="output3" readonly></textarea>
+</div>
+
+</body>
+</html>
